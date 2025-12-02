@@ -13,6 +13,8 @@ function App() {
         <Button text="Save & close" />        
       </header>
 
+      <progress max="100" value="10"> </progress>
+
       <hr />
 
       <footer>

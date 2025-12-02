@@ -71,6 +71,20 @@ button.primary {
   border: none;
 }
 
+progress {
+  min-width: 100%;
+  -webkit-appearance: none;
+  height: 0.5rem;
+}
+
+::-webkit-progress-bar {
+  background-color: rgb(235, 235, 235);
+}
+
+::-webkit-progress-value {
+  background-color: var(--color-orange);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
