@@ -17,10 +17,10 @@ const options = [
 ]
 export default function Moment() {
 
-  return <>
+  return <div >
     <Heading>What moment will you offer your guests?</Heading>
     <div className="options">
       {options.map(({ text, iconUrl}) => <Option key={text} text={text} iconUrl={iconUrl} />)}
     </div>
-  </>
+  </div>
 }

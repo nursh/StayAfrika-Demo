@@ -14,6 +14,7 @@
   /* Variables */
   --color-green: rgb(0, 107, 92);
   --color-orange: rgb(255, 107, 53);
+  --color-light-orange: rgb(235, 235, 235);
   --color-font: rgb(44, 62, 80);
 }
 
@@ -80,7 +81,7 @@ progress {
 }
 
 ::-webkit-progress-bar {
-  background-color: rgb(235, 235, 235);
+  background-color: var(--color-light-orange);
 }
 
 ::-webkit-progress-value {

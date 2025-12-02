@@ -3,6 +3,11 @@
   margin: 0 auto;
 }
 
+.container {
+  max-width: 60%;
+  margin-inline: auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;

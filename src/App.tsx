@@ -16,9 +16,9 @@ function App() {
 
       <progress max="100" value="10"> </progress>
 
-      <>
+      <div className='container'>
         <Moment />
-      </>
+      </div>
       
       <hr />
 
