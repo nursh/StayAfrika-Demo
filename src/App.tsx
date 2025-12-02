@@ -6,24 +6,26 @@ import Moment2 from "./pages/Moment2";
 function App() {
   return (
     <>
-      <div className="header-container">
-        <header>
-          <h1>
-            <span className="green">Stay</span>
-            <span className="orange">Africa</span>
-          </h1>
-          <Button text="Save & close" />
-        </header>
+      <main>
+        <div className="header-container">
+          <header>
+            <h1>
+              <span className="green">Stay</span>
+              <span className="orange">Afrika</span>
+            </h1>
+            <Button text="Save & close" />
+          </header>
 
-        <progress max="100" value="10">
-          {" "}
-        </progress>
-      </div>
+          <progress max="100" value="10">
+            {" "}
+          </progress>
+        </div>
 
-      <div className="container">
-        {/* <Moment /> */}
-        <Moment2 />
-      </div>
+        <div className="container">
+          {/* <Moment /> */}
+          <Moment2 />
+        </div>
+      </main>
 
       <footer>
         <Button text="Next" primary />
