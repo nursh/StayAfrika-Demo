@@ -1,5 +1,6 @@
 import './App.css'
 import Button from './components/Button'
+import Moment from './pages/Moment'
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
 
       <progress max="100" value="10"> </progress>
 
+      <>
+        <Moment />
+      </>
+      
       <hr />
 
       <footer>
