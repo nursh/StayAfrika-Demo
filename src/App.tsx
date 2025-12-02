@@ -1,6 +1,7 @@
 import "./App.css";
 import Button from "./components/Button";
 import Moment from "./pages/Moment1";
+import Moment2 from "./pages/Moment2";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       </div>
 
       <div className="container">
-        <Moment />
+        {/* <Moment /> */}
+        <Moment2 />
       </div>
 
       <footer>

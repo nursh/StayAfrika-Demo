@@ -1,0 +1,19 @@
+.counter {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.counter button {
+  display: grid;
+  place-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.125rem;
+  --bg-color: rgb(245, 245, 245);
+}
