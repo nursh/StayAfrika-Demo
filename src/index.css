@@ -14,11 +14,12 @@
   /* Variables */
   --color-green: rgb(0, 107, 92);
   --color-orange: rgb(255, 107, 53);
+  --color-font: rgb(44, 62, 80);
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-font);
   text-decoration: inherit;
 }
 a:hover {
@@ -29,6 +30,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  color: var(--color-font);
 }
 
 h1 {
