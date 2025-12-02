@@ -1,5 +1,3 @@
-import '../Button.css';
-
 type ButtonProps = {
   primary?: boolean;
   text: string;

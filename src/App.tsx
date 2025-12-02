@@ -5,10 +5,20 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>StayAfrica</h1>
-        <Button text="Save & close" primary />        
-      </div>
+      <header>
+        <h1>
+          <span className='green'>Stay</span>
+          <span className='orange'>Africa</span>
+        </h1>
+        <Button text="Save & close" />        
+      </header>
+
+      <hr />
+
+      <footer>
+        <Button text="Next" primary />
+        <a>Back</a>
+      </footer>
     </>
   )
 }
