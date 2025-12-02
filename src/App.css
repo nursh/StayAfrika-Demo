@@ -33,6 +33,12 @@ header {
   text-align: center;
 }
 
+.subheading {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+}
+
 footer {
   display: flex;
   flex-direction: column;
