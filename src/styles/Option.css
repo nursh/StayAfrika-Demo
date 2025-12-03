@@ -11,8 +11,7 @@
   cursor: pointer;
 }
 
-.option:hover,
-.selected.option {
+.option:hover { 
   border-color: var(--color-orange);
   background-color: var(--color-light-orange);
 }

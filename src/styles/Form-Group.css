@@ -102,6 +102,11 @@ select {
   gap: 1.5rem 0.5rem;
 }
 
+.checkbox-group.no-border {
+  border: none;
+  padding: 0;
+}
+
 .checkbox-group input,
 .radio-button input {
   appearance: none;
@@ -112,10 +117,18 @@ select {
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: 0.625rem;
+  cursor: pointer;
+}
+
+.radio-button label:hover,
+.checkbox-group input[type="checkbox"] + label:hover {
+  border-color: var(--color-orange);
+  background-color: var(--color-light-orange);
 }
 
 .form-group input[type="checkbox"]:checked + label,
-.form-group input[type="radio"]:checked + label {
+.checkbox-group input[type="checkbox"]:checked + label,
+.radio-button input[type="radio"]:checked + label {
   border: 1px solid var(--color-orange);
   background-color: var(--color-light-orange);
 }

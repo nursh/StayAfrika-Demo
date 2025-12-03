@@ -5,6 +5,34 @@ import { useRef } from "react";
 import Close from "@app/assets/lucide/x.svg";
 import Button from "@app/components/Button";
 
+const daysOfWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+const fromTime = [
+  "7:00 AM",
+  "8:00 AM",
+  "9:00 AM",
+  "10:00 AM",
+  "11:00 AM",
+  "12:00 PM",
+];
+
+const toTime = [
+  "1:00 PM",
+  "2:00 PM",
+  "3:00 PM",
+  "4:00 PM",
+  "5:00 PM",
+  "6:00 PM",
+];
+
 export default function Moment8() {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -56,84 +84,36 @@ export default function Moment8() {
         <div className="checkbox-container">
           <p className="semibold">Days</p>
           <div className="checkbox-group">
-            <div>
-              <input type="checkbox" name="days" id="Sunday" value="Sunday" />
-              <label htmlFor="Sunday" className="txt-normal">
-                Sunday
-              </label>
-            </div>
-            <div>
-              <input type="checkbox" name="days" id="Monday" value="Monday" />
-              <label htmlFor="Monday" className="txt-normal">
-                Monday
-              </label>
-            </div>
-            <div>
-              <input type="checkbox" name="days" id="Tuesday" value="Tuesday" />
-              <label htmlFor="Tuesday" className="txt-normal">
-                Tuesday
-              </label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                name="days"
-                id="Wednesday"
-                value="Wednesday"
-              />
-              <label htmlFor="Wednesday" className="txt-normal">
-                Wednesday
-              </label>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                name="days"
-                id="Thursday"
-                value="Thursday"
-              />
-              <label htmlFor="Thursday" className="txt-normal">
-                Thursday
-              </label>
-            </div>
-            <div>
-              <input type="checkbox" name="days" id="Friday" value="Friday" />
-              <label htmlFor="Friday" className="txt-normal">
-                Friday
-              </label>
-            </div>
-
-            <div>
-              <input
-                type="checkbox"
-                name="days"
-                id="Saturday"
-                value="Saturday"
-              />
-              <label htmlFor="Saturday" className="txt-normal">
-                Saturday
-              </label>
-            </div>
+            {daysOfWeek.map((day) => (
+              <div>
+                <input type="checkbox" name="days" id={day} value={day} />
+                <label htmlFor={day} className="txt-normal">
+                  {day}
+                </label>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="form-group">
           <label htmlFor="from-time">From</label>
           <select name="from-time" id="from-time">
-            <option value="">9:00 AM</option>
-            <option value="">10:00 AM</option>
-            <option value="">11:00 AM</option>
-            <option value="">12:00 PM</option>
+            {fromTime.map((time) => (
+              <option value={time} key={time}>
+                {time}
+              </option>
+            ))}
           </select>
         </div>
 
         <div className="form-group">
           <label htmlFor="to-time">To</label>
           <select name="to-time" id="to-time">
-            <option value="">1:00 PM</option>
-            <option value="">2:00 PM</option>
-            <option value="">3:00 PM</option>
-            <option value="">4:00 PM</option>
+            {toTime.map((time) => (
+              <option value={time} key={time}>
+                {time}
+              </option>
+            ))}
           </select>
         </div>
 

@@ -5,6 +5,7 @@ import MomentPhoto2 from "@app/assets/moment-2.svg";
 import Plus from '@app/assets/lucide/plus.svg';
 
 import "@app/styles/Moment.css";
+import { useNavigate } from "react-router";
 
 const moments = [
   {
@@ -22,6 +23,9 @@ const moments = [
 ];
 
 export default function Moment71() {
+
+  const navigate = useNavigate();
+  
   return (
     <>
       <Heading>Map out your moment</Heading>
@@ -45,7 +49,7 @@ export default function Moment71() {
           ))
         }
 
-        <div className="moment">
+        <div className="moment" onClick={() => navigate('/activity-form')}>
           <img src={Plus} alt="Add a moment icon" />
           <p>Add an activity</p>
         </div>

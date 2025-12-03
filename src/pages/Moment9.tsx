@@ -1,6 +1,6 @@
 import Heading from "@app/components/Heading";
 import RadioButton from "@app/components/RadioButton";
-
+import { useState } from "react";
 
 const transport = {
   name: "transport",
@@ -31,7 +31,8 @@ const join = {
 };
 
 export default function Moment9() {
-  
+  const [offerTransport, setOfferTransport] = useState("");
+
   return (
     <>
       <Heading>How should your guest prepare?</Heading>
@@ -40,31 +41,34 @@ export default function Moment9() {
           <p className="semibold">Will you offer transportation?</p>
           <div className="radio-buttons">
             {transport.options.map(({ id, value, label }) => (
-              <RadioButton
-                id={id}
-                value={value}
-                label={label}
-                key={id}
-                name={transport.name}
-              />
+              <div className="radio-button">
+                <input
+                  type="radio"
+                  id={id}
+                  name={transport.name}
+                  value={value}
+                  defaultValue={offerTransport}
+                  onChange={() => setOfferTransport(value)}
+                />
+                <label htmlFor={id}>{label}</label>
+              </div>
             ))}
           </div>
         </div>
 
-        <div className="radio-group">
-          <p className="semibold">How? (Select all that apply)</p>
-          <div className="radio-buttons">
-            {transportTypes.options.map(({ id, value, label }) => (
-              <RadioButton
-                id={id}
-                value={value}
-                label={label}
-                key={id}
-                name={transportTypes.name}
-              />
-            ))}
+        {offerTransport === 'yes' && (
+          <div className="radio-group">
+            <p className="semibold">How? (Select all that apply)</p>
+            <div className="checkbox-group no-border">
+              {transportTypes.options.map(({ id, value, label }) => (
+                <div>
+                  <input type="checkbox" id={id} name={transportTypes.name} value={value} />
+                  <label htmlFor={id}>{label}</label>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="radio-group">
           <p className="semibold">Will guests need to pay to join?</p>
