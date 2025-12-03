@@ -1,0 +1,23 @@
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--color-border);
+  border-style: dashed;
+  padding: 1.25rem 0.83rem;
+  margin-block-start: 3rem;
+}
+
+.upload-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.upload-text {
+  color: rgb(135, 136, 136);
+}
+
+.upload-size {
+  color: rgb(179, 179, 179);
+}
