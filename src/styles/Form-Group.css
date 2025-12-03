@@ -101,7 +101,7 @@ select {
   
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .checkbox-group.no-border {
@@ -125,6 +125,10 @@ select {
   cursor: pointer;
 }
 
+.radio-button label {
+  flex-basis: 140px;
+}
+
 .radio-button label:hover,
 .checkbox-group input[type="checkbox"] + label:hover {
   border-color: var(--color-orange);
@@ -140,7 +144,8 @@ select {
 
 /* Radio Group */
 .radio-buttons {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
   gap: 1rem;
 }
 
