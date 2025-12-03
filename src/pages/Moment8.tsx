@@ -28,7 +28,12 @@ export default function Moment8() {
               <p className="txt-semibold">Sunday, Thursday</p>
               <p className="txt-normal">8:00 AM - 5:00 PM</p>
             </div>
-            <img src={Edit} alt="Edit icon" onClick={openDialog} aria-labelledby="open"/>
+            <img
+              src={Edit}
+              alt="Edit icon"
+              onClick={openDialog}
+              aria-labelledby="open"
+            />
           </div>
 
           <div className="moment">
@@ -51,34 +56,64 @@ export default function Moment8() {
         <div className="checkbox-container">
           <p className="semibold">Days</p>
           <div className="checkbox-group">
-            <label htmlFor="days" className="txt-normal">
-              <input type="checkbox" name="days" value="Sunday" />
-              Sunday
-            </label>{" "}
-            <label htmlFor="days" className="txt-normal">
-              <input type="checkbox" name="days" value="Monday" />
-              Monday
-            </label>{" "}
-            <label htmlFor="days" className="txt-normal">
-              <input type="checkbox" name="days" value="Tuesday" />
-              Tuesday
-            </label>{" "}
-            <label htmlFor="days" className="txt-normal">
-              <input type="checkbox" name="days" value="Wednesday" />
-              Wednesday
-            </label>{" "}
-            <label htmlFor="days" className="txt-normal">
-              <input type="checkbox" name="days" value="Thursday" />
-              Thursday
-            </label>{" "}
-            <label htmlFor="days" className="txt-normal">
-              <input type="checkbox" name="days" value="Friday" />
-              Friday
-            </label>{" "}
-            <label htmlFor="days" className="txt-normal">
-              <input type="checkbox" name="days" value="Saturday" />
-              Saturday
-            </label>
+            <div>
+              <input type="checkbox" name="days" id="Sunday" value="Sunday" />
+              <label htmlFor="Sunday" className="txt-normal">
+                Sunday
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="days" id="Monday" value="Monday" />
+              <label htmlFor="Monday" className="txt-normal">
+                Monday
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="days" id="Tuesday" value="Tuesday" />
+              <label htmlFor="Tuesday" className="txt-normal">
+                Tuesday
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="days"
+                id="Wednesday"
+                value="Wednesday"
+              />
+              <label htmlFor="Wednesday" className="txt-normal">
+                Wednesday
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="days"
+                id="Thursday"
+                value="Thursday"
+              />
+              <label htmlFor="Thursday" className="txt-normal">
+                Thursday
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" name="days" id="Friday" value="Friday" />
+              <label htmlFor="Friday" className="txt-normal">
+                Friday
+              </label>
+            </div>
+
+            <div>
+              <input
+                type="checkbox"
+                name="days"
+                id="Saturday"
+                value="Saturday"
+              />
+              <label htmlFor="Saturday" className="txt-normal">
+                Saturday
+              </label>
+            </div>
           </div>
         </div>
 
