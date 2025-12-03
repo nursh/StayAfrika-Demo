@@ -2,11 +2,19 @@ import '@app/styles/Counter.css'
 import { useState } from "react"
 
 
-export default function Counter() {
-  const [count, setCount] = useState(0);
+type CounterProps = {
+  initValue?: number;
+  step?: number
+}
 
-  const incCount = () => setCount(count + 1)
-  const decCount = () => count >= 1 ? setCount(count - 1) : setCount(0)
+export default function Counter({ initValue , step }: CounterProps) {
+
+  const initialCount = initValue || 0;
+  const stepValue = step || 1;
+  const [count, setCount] = useState(initialCount);
+
+  const incCount = () => setCount(count + stepValue)
+  const decCount = () => count >= initialCount ? setCount(count - stepValue) : setCount(initialCount)
 
   return (
     <div className="counter">
