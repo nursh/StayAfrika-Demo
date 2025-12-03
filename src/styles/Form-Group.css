@@ -83,8 +83,8 @@ select {
   border-color: var(--color-border);
 }
 
-/* Radio group */
-.checkbox-container p{
+/* Checkbox group */
+.checkbox-container p {
   margin-block-end: 1rem;
 }
 
@@ -94,22 +94,37 @@ select {
   border-radius: 0.5rem;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 1.5rem;
+  gap: 1.5rem 0.5rem;
 }
 
-.checkbox-group input {
+.checkbox-group input,
+.radio-button input {
   appearance: none;
 }
 
-.checkbox-group label {
+.checkbox-group label,
+.radio-button label {
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: 0.625rem;
 }
 
-input[type="checkbox"]:checked + label {
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
   border: 1px solid var(--color-orange);
   background-color: var(--color-light-orange);
+}
+
+/* Radio Group */
+.radio-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* Dialog */
