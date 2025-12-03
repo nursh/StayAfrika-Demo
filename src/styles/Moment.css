@@ -1,0 +1,20 @@
+.moment {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+.moment-title {
+  font-weight: 600;
+}
+
+.moment-duration {
+  color: rgb(153, 153, 153);
+}
+
+.moment-description {
+  font-size: 0.875rem;
+}

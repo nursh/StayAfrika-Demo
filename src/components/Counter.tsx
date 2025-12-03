@@ -14,7 +14,7 @@ export default function Counter({ initValue , step }: CounterProps) {
   const [count, setCount] = useState(initialCount);
 
   const incCount = () => setCount(count + stepValue)
-  const decCount = () => count >= initialCount ? setCount(count - stepValue) : setCount(initialCount)
+  const decCount = () => count > initialCount ? setCount(count - stepValue) : setCount(initialCount)
 
   return (
     <div className="counter">

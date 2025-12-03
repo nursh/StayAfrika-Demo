@@ -48,7 +48,7 @@ footer {
 }
 
 .content-container {
-  margin-block-start: 2rem;
+  margin-block: 2rem 3rem;
 }
 
 .content-container > *+* {
