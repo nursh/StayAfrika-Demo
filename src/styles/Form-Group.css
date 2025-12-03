@@ -19,8 +19,25 @@
   resize: none;
 }
 
+.form-group textarea::placeholder {
+  font-family: sans-serif;
+}
+
 .form-group p {
   text-align: right;
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+/* Input icons */
+.form-group .input-icon {
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-position-x: 0.5rem;
+  background-position-y: 50%;
+  padding-inline-start: 3rem;
+}
+
+#address {
+  --bg-img: url('../assets/lucide/map-pin.svg');
 }

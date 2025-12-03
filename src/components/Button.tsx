@@ -1,9 +1,9 @@
 type ButtonProps = {
   primary?: boolean;
-  text: string;
+  children: React.ReactNode;
 }
 
-export default function Button({ primary, text }: ButtonProps) {
+export default function Button({ primary, children }: ButtonProps) {
 
-  return <button className={primary ? 'primary' : undefined}>{text}</button>
+  return <button className={primary ? 'primary' : undefined}>{children}</button>
 }
