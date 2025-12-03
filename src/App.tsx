@@ -13,8 +13,16 @@ import Moment71 from "./pages/Moment7-1";
 import Moment8 from "./pages/Moment8";
 import Moment9 from "./pages/Moment9";
 import MomentFinal from "./pages/MomentFinal";
+import { Link, NavLink, Route, Routes, useLocation  } from "react-router";
+import { routing } from '@app/utils/routing';
 
 function App() {
+
+  const location = useLocation();
+  const routeInfo = routing.find((route) => route.active === location.pathname);
+  const next = routeInfo?.next || '/';
+  const back = routeInfo?.back || '/'
+
   return (
     <>
       <main>
@@ -33,24 +41,28 @@ function App() {
         </div>
 
         <div className="container">
-          {/* <Moment /> */}
-          {/* <Moment2 /> */}
-          {/* <Moment3 /> */}
-          {/* <Moment41 /> */}
-          {/* <Moment42 /> */}
-          {/* <Moment51 /> */}
-          {/* <Moment6 /> */}
-          {/* <Moment71 /> */}
-          {/* <Moment72 /> */}
-          {/* <Moment8 /> */}
-          {/* <Moment9 /> */}
-          <MomentFinal />
+          <Routes>
+            <Route index element={<Moment />} />
+            <Route path="years" element={<Moment2 />} />
+            <Route path="training" element={<Moment3 />} />
+            <Route path="location" element={<Moment41 />} />
+            <Route path="location-form" element={<Moment42 />} />
+            <Route path="work" element={<Moment51 />} />
+            <Route path="moment" element={<Moment6 />} />
+            <Route path="map-out-moment" element={<Moment71 />} />
+            <Route path="activity-form" element={<Moment72 />} />
+            <Route path="available-hours" element={<Moment8 />} />
+            <Route path="transportation" element={<Moment9 />} />
+            <Route path="price" element={<MomentFinal />} />
+          </Routes>
         </div>
       </main>
 
       <footer>
-        <Button primary>Next</Button>
-        <a>Back</a>
+        <NavLink to={next}>
+          <Button primary >Next</Button>
+        </NavLink>
+        <Link to={back}>Back</Link>
       </footer>
     </>
   );

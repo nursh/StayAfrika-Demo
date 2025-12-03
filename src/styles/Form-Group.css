@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+
+.groups {
+  margin-block-start: 3rem;
+}
+
 .form-group label,
 .file-upload p {
   font-weight: 600;
@@ -130,13 +135,13 @@ select {
 /* Dialog */
 dialog {
   width: 450px;
-  border: 0.2px solid;
+  border: none;
   border-radius: 0.5rem;
   padding-inline: 2rem;
 }
 
 dialog > *+* {
-  margin-block-start: 1.5rem;
+  margin-block-start: var(--spacing, 1.5rem);
 }
 
 dialog .center {

@@ -1,6 +1,4 @@
-
 input[type="number"] {
-  
   padding-inline-start: 3rem;
   padding: 0.875rem 0.75rem;
   border-top-right-radius: 0.5rem;
@@ -37,4 +35,8 @@ input[type="number"] {
 
 .final-price p + p {
   margin-block-end: 2rem;
+}
+
+.price-dialog {
+  text-align: center;
 }

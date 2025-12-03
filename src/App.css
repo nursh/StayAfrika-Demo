@@ -67,6 +67,14 @@ footer {
   font-size: 1.5rem;
 }
 
+.txt-xlarge {
+  font-size: 2rem;
+}
+
 .txt-bold {
   font-weight: bold;
+}
+
+.margin-bs {
+  margin-block-start: 2rem;
 }

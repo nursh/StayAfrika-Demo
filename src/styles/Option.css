@@ -8,9 +8,11 @@
   padding-block: 1rem;
   padding-inline: 0.75rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
-.option:hover {
+.option:hover,
+.selected.option {
   border-color: var(--color-orange);
   background-color: var(--color-light-orange);
 }
@@ -19,4 +21,5 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
+  margin-block-start: 3rem;
 }
