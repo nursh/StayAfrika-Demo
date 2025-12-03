@@ -6,6 +6,7 @@ import HeartPulse from "@app/assets/lucide/heart-pulse.svg";
 import Utensils from "@app/assets/lucide/utensils.svg";
 import TreePine from "@app/assets/lucide/tree-pine.svg";
 import Landmark from "@app/assets/lucide/landmark.svg";
+import { useState } from "react";
 
 
 const options = [
@@ -18,12 +19,14 @@ const options = [
 
 export default function Moment() {
 
+  const [selected, setSelected] = useState('');
+
   return (
     <div>
       <Heading>What moment will you offer your guests?</Heading>
       <div className="options">
         {options.map(({ text, iconUrl }) => (
-          <Option key={text} text={text} iconUrl={iconUrl} />
+          <Option key={text} text={text} iconUrl={iconUrl} selected={selected} setSelected={setSelected} />
         ))}
       </div>
     </div>
