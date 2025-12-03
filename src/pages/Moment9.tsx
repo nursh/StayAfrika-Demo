@@ -57,7 +57,7 @@ export default function Moment9() {
         </div>
 
         {offerTransport === 'yes' && (
-          <div className="radio-group">
+          <div className="col">
             <p className="semibold">How? (Select all that apply)</p>
             <div className="checkbox-group no-border">
               {transportTypes.options.map(({ id, value, label }) => (

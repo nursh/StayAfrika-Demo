@@ -97,9 +97,11 @@ select {
   border: 1px solid var(--color-border);
   padding: 0.875rem 0.75rem;
   border-radius: 0.5rem;
+  margin-block-start: 1rem;;
+  
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 1.5rem 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .checkbox-group.no-border {
@@ -110,11 +112,14 @@ select {
 .checkbox-group input,
 .radio-button input {
   appearance: none;
+  display: none;
 }
 
 .checkbox-group label,
 .radio-button label {
-  padding: 0.5rem 1rem;
+  display: block;
+  text-align: center;
+  padding: 1rem 0.75rem;
   border: 1px solid var(--color-border);
   border-radius: 0.625rem;
   cursor: pointer;
