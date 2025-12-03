@@ -35,11 +35,11 @@ export default function Moment71() {
           <div className="moment">
             <img src={imageUrl} alt="moment photo 1" />
             <div>
-              <p className="moment-title">
+              <p className="txt-semibold">
                 {title}{" "}
                 <span className="moment-duration">&bull; {duration}</span>{" "}
               </p>
-              <p className="moment-description">{description}</p>
+              <p className="txt-normal">{description}</p>
             </div>
           </div>
           ))

@@ -10,6 +10,7 @@ import Moment51 from "./pages/Moment5-1";
 import Moment6 from "./pages/Moment6";
 import Moment72 from "./pages/Moment7-2";
 import Moment71 from "./pages/Moment7-1";
+import Moment8 from "./pages/Moment8";
 
 function App() {
   return (
@@ -37,8 +38,9 @@ function App() {
           {/* <Moment42 /> */}
           {/* <Moment51 /> */}
           {/* <Moment6 /> */}
-          <Moment71 />
+          {/* <Moment71 /> */}
           {/* <Moment72 /> */}
+          <Moment8 />
         </div>
       </main>
 

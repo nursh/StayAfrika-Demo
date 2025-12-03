@@ -83,7 +83,7 @@ button.primary {
 
 progress {
   min-width: 100%;
-  -webkit-appearance: none;
+  appearance: none;
   height: 0.5rem;
 }
 
