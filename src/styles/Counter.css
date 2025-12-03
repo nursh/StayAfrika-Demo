@@ -17,3 +17,9 @@
   font-size: 1.125rem;
   --bg-color: rgb(245, 245, 245);
 }
+
+.guest-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

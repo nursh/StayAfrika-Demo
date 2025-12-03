@@ -5,7 +5,7 @@ export default function Moment42() {
     <>
       <Heading>Confirm the location</Heading>
 
-      <div className="address-container">
+      <div className="content-container">
         <div className="form-group">
           <label htmlFor="country">Country / Region</label>
           <input

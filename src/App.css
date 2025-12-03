@@ -30,6 +30,7 @@ header {
 .heading {
   font-size: 1.5rem;
   font-weight: 700;
+  margin-block: 2rem 0.5rem;
 }
 
 .subheading {
@@ -44,4 +45,12 @@ footer {
   gap: 2rem;
   border-top: 1px solid black;
   padding-block: 1.5rem;
+}
+
+.content-container {
+  margin-block-start: 2rem;
+}
+
+.content-container > *+* {
+  margin-block-start: 2rem;
 }
