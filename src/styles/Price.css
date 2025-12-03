@@ -1,0 +1,40 @@
+
+input[type="number"] {
+  
+  padding-inline-start: 3rem;
+  padding: 0.875rem 0.75rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: .5rem;
+  border: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.price {
+  display: flex;
+}
+
+.include-group {
+  --spacing: 1rem;
+}
+
+.include-group input[type="checkbox"] {
+  accent-color: var(--color-green);
+}
+
+.price span {
+  padding: 0.875rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: rgb(245, 245, 245);
+  color: rgb(179, 179, 179);
+}
+
+.final-price {
+  text-align: center;
+  --spacing: 3rem;
+}
+
+.final-price p + p {
+  margin-block-end: 2rem;
+}

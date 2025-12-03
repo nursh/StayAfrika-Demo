@@ -52,7 +52,7 @@ footer {
 }
 
 .content-container > *+* {
-  margin-block-start: 2rem;
+  margin-block-start: var(--spacing, 2rem);
 }
 
 .txt-semibold {
@@ -61,4 +61,12 @@ footer {
 
 .txt-normal {
   font-size: 0.875rem;
+}
+
+.txt-large {
+  font-size: 1.5rem;
+}
+
+.txt-bold {
+  font-weight: bold;
 }
