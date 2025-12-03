@@ -15,13 +15,23 @@ import Moment9 from "./pages/Moment9";
 import MomentFinal from "./pages/MomentFinal";
 import { Link, NavLink, Route, Routes, useLocation  } from "react-router";
 import { routing } from '@app/utils/routing';
+import { useRef } from "react";
+
 
 function App() {
 
   const location = useLocation();
   const routeInfo = routing.find((route) => route.active === location.pathname);
   const next = routeInfo?.next || '/';
-  const back = routeInfo?.back || '/'
+  const back = routeInfo?.back || '/';
+  const activeLink = routeInfo?.active || '';
+  const createMomentRef = useRef<{ openDialog: () => void } | null>(null);
+
+  const createMoment = () => {
+    if (createMomentRef.current) {
+      createMomentRef.current.openDialog()
+    }
+  }
 
   return (
     <>
@@ -53,15 +63,19 @@ function App() {
             <Route path="activity-form" element={<Moment72 />} />
             <Route path="available-hours" element={<Moment8 />} />
             <Route path="transportation" element={<Moment9 />} />
-            <Route path="price" element={<MomentFinal />} />
+            <Route path="price" element={<MomentFinal ref={createMomentRef} />} />
           </Routes>
         </div>
       </main>
 
       <footer>
-        <NavLink to={next}>
-          <Button primary >Next</Button>
-        </NavLink>
+        {
+          activeLink === '/price'
+            ? <button className="primary" onClick={createMoment}>Create Moment</button> 
+            : <NavLink to={next}>
+                <Button primary >Next</Button>
+              </NavLink>
+        }
         <Link to={back}>Back</Link>
       </footer>
     </>

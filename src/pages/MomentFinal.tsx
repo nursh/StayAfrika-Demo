@@ -1,26 +1,31 @@
 import Heading from "@app/components/Heading";
 import Subheading from "@app/components/Subheading";
 import ChevronDown from "@app/assets/lucide/chevron-down.svg";
-import Checkmark from '@app/assets/lucide/circle-check-big.svg';
+import Checkmark from "@app/assets/lucide/circle-check-big.svg";
 import "@app/styles/Price.css";
-import { useRef } from "react";
+import { useImperativeHandle, useRef } from "react";
 import Close from "@app/assets/lucide/x.svg";
 import Button from "@app/components/Button";
 import { Link } from "react-router";
 
+type Props = {
+  ref: React.RefObject<{ openDialog: () => void } | null>;
+}
 
-export default function MomentFinal() {
-
+export default function MomentFinal({ ref }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   const openDialog = () => {
     dialogRef.current?.showModal();
   };
 
+  useImperativeHandle(ref, () => ({
+    openDialog
+  }))
+
   const closeDialog = () => {
     dialogRef.current?.close();
   };
-
 
   return (
     <>
@@ -45,7 +50,7 @@ export default function MomentFinal() {
           <p className="txt-bold txt-large">
             &#8358; 9,302.00{" "}
             <span>
-              <img src={ChevronDown} alt="Chevron down" onClick={openDialog}/>
+              <img src={ChevronDown} alt="Chevron down" />
             </span>
           </p>
         </div>
@@ -60,12 +65,16 @@ export default function MomentFinal() {
           aria-labelledby="close"
         />
 
-        <img src={Checkmark} alt="check mark" className="check"/>
+        <img src={Checkmark} alt="check mark" className="check" />
         <h4 className="txt-large">
-          Listing submitted<br />
+          Listing submitted
+          <br />
           successfully
         </h4>
-        <p>Our team is now reviewing your details. You'll be notified once your listing is approved and ready to go live</p>
+        <p>
+          Our team is now reviewing your details. You'll be notified once your
+          listing is approved and ready to go live
+        </p>
         <Button primary>Go to Dashboard</Button>
         <Link to="/" className="center">
           View your listing
